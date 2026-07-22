@@ -4,3 +4,6 @@
 [submodule "modules/nvim"]
 	path = modules/nvim
 	url = https://github.com/WinterSunset95/neovim-mini
+[submodule "modules/niri"]
+	path = modules/niri
+	url = https://github.com/WinterSunset95/niri

@@ -63,5 +63,5 @@
   };
 
   # 4. Create the pure, unadulterated symlink
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/winters-arch-dotfs/nvim";
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/home-manager/modules/nvim";
  }
