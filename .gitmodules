@@ -1,0 +1,6 @@
+[submodule "modules/awesome"]
+	path = modules/awesome
+	url = https://github.com/WinterSunset95/awesome
+[submodule "modules/nvim"]
+	path = modules/nvim
+	url = https://github.com/WinterSunset95/neovim-mini
