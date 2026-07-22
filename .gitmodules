@@ -7,3 +7,6 @@
 [submodule "modules/niri"]
 	path = modules/niri
 	url = https://github.com/WinterSunset95/niri
+[submodule "wallpapers"]
+	path = wallpapers
+	url = https://github.com/SleepyCatHey/CozyPixels
