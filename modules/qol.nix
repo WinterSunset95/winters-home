@@ -9,11 +9,7 @@
 
     wireguard-tools
 
-    thunar
-    thunar-archive-plugin
-    thunar-volman
-
-    xwayland-satellite
+    obs-studio
   ];
 
   programs.zathura = {
