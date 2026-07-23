@@ -3,6 +3,7 @@
     ./modules/browsers.nix
     ./modules/neovim.nix
     ./modules/tmux.nix
+    ./modules/noctalia.nix
     ./modules/discord.nix
     ./modules/shell_tools.nix
     ./modules/zsh.nix
@@ -28,7 +29,6 @@
 
 
 	programs.home-manager.enable = true;
-  programs.noctalia.enable = true;
   programs.direnv = {
     enable = true;
     enableBashIntegration = true;
