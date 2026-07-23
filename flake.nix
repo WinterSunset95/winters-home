@@ -1,5 +1,11 @@
 {
 	description = "Winter's home manager environment";
+
+  nixConfig = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+  };
+
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -7,10 +13,6 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		dms = { 
-      url = "github:AvengeMedia/DankMaterialShell/stable"; 
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixcord = {
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,8 +21,11 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia/cachix";
+    };
 	};
-	outputs = { self, nixpkgs, home-manager, dms, nixcord, catppuccin, ... }@inputs: {
+	outputs = { self, nixpkgs, home-manager, nixcord, catppuccin, noctalia, ... }@inputs: {
     homeConfigurations."autumn" = home-manager.lib.homeManagerConfiguration {
 			pkgs = import nixpkgs {
         system = "x86_64-linux";
@@ -29,11 +34,10 @@
       extraSpecialArgs = { inherit inputs; };
       modules = [
         ./home.nix
-        dms.homeModules.dank-material-shell
+        noctalia.homeModules.default
         nixcord.homeModules.nixcord
         catppuccin.homeModules.catppuccin
       ];
     };
-		
 	};
 }

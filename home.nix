@@ -22,14 +22,13 @@
 	home.homeDirectory = "/home/autumn";
   home.packages  = with pkgs; [
     beeper
-
     spotify
     spotify-player
   ];
 
 
 	programs.home-manager.enable = true;
-	programs.dank-material-shell.enable = true;
+  programs.noctalia.enable = true;
   programs.direnv = {
     enable = true;
     enableBashIntegration = true;
