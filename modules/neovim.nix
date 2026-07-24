@@ -2,53 +2,25 @@
   home.packages = with pkgs; [
     neovim
 
-    # Typescript
-    nodejs
-    typescript-language-server
-    vscode-langservers-extracted
-    tailwindcss-language-server
-    emmet-ls
-    prettier
-    vtsls
-
     # Svelte/SvelteKit
     svelte-language-server
-
-    # Python
-    python3
-    pyright
-    black
-
-    # C/C++
-    gnumake
-    gcc
-    clang-tools
-    tree-sitter
-
-    # Lua & Nix
-    lua-language-server
-    nil
-    nixpkgs-fmt
-    luarocks
-    lua
-
-    # Rust
-    cargo
-    rustc
-    rust-analyzer
-
-    # Golang 
-    gopls
-
-    # LaTeX
-    texlab
-    texliveMedium
-    ltex-ls
 
     # Core Deps
     ripgrep
     fd
     wl-clipboard
+    gnumake
+
+    # Important lsps
+    lua-language-server
+    nil
+    nixpkgs-fmt
+
+    # Generic lsps
+    pyright
+    vtsls
+    prettier
+    gopls
   ];
 
   home.shellAliases = {
