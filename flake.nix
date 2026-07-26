@@ -24,8 +24,9 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
     };
+    nsticky.url = "github:lonerOrz/nsticky";
 	};
-	outputs = { self, nixpkgs, home-manager, nixcord, catppuccin, noctalia, ... }@inputs: {
+	outputs = { self, nixpkgs, home-manager, nixcord, catppuccin, noctalia, nsticky, ... }@inputs: {
     homeConfigurations."autumn" = home-manager.lib.homeManagerConfiguration {
 			pkgs = import nixpkgs {
         system = "x86_64-linux";
@@ -37,6 +38,7 @@
         noctalia.homeModules.default
         nixcord.homeModules.nixcord
         catppuccin.homeModules.catppuccin
+        nsticky.homeModules.default
       ];
     };
 	};

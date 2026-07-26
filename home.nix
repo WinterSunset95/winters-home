@@ -44,6 +44,18 @@
     cursors.enable = true;
   };
 
+  programs.nsticky = {
+    enable = true;
+    # settings = {
+    #   sticky = {
+    #     vesktop = {
+    #       app-id = "vesktop";
+    #       title = ".*Stream";
+    #     };
+    #   };
+    # };
+  };
+
   xdg.configFile."niri".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/home-manager/modules/niri";
   xdg.configFile."awesome".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/home-manager/modules/awesome";
 
