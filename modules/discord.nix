@@ -24,19 +24,35 @@
       };
     };
   };
-  xdg.desktopEntries.vesktop = {
-    name = "Discord";
-    genericName = "Internet Messenger";
-    # 2GB RAM, 150% CPU
-    exec = "resource-jail -c 150%% -m 2 vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu-rasterization --enable-zero-copy --ignore-gpu-blocklist --disable-features=Vulkan %U";
-    icon = "discord";
-    terminal = false;
-    type = "Application";
-    categories = [ "Network" "InstantMessaging" "Chat" ];
-    settings = {
-      StartupWMClass = "Vesktop";
-      Keywords = "discord;vencord;electron;chat";
-      Version = "1.5";
+  xdg.desktopEntries = {
+    vesktop = {
+      name = "Discord";
+      genericName = "Internet Messenger";
+      exec = "vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu-rasterization --enable-zero-copy --ignore-gpu-blocklist --disable-features=Vulkan %U";
+      icon = "discord";
+      terminal = false;
+      type = "Application";
+      categories = [ "Network" "InstantMessaging" "Chat" ];
+      settings = {
+        StartupWMClass = "Vesktop";
+        Keywords = "discord;vencord;electron;chat";
+        Version = "1.5";
+      };
+    };
+    "discordjailed" = {
+      name = "Discord Jailed";
+      genericName = "Internet Messenger";
+      # 2GB RAM, 150% CPU
+      exec = "resource-jail -c 150%% -m 2 vesktop --no-sandbox --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu-rasterization --enable-zero-copy --ignore-gpu-blocklist --disable-features=Vulkan %U";
+      icon = "discord";
+      terminal = false;
+      type = "Application";
+      categories = [ "Network" "InstantMessaging" "Chat" ];
+      settings = {
+        StartupWMClass = "Vesktop";
+        Keywords = "discord;vencord;electron;chat";
+        Version = "1.5";
+      };
     };
   };
 
