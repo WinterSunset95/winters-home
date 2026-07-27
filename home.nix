@@ -25,6 +25,7 @@
     beeper
     spotify
     spotify-player
+    playerctl
   ];
 
 
