@@ -3,6 +3,7 @@
     ./modules/browsers.nix
     ./modules/neovim.nix
     ./modules/tmux.nix
+    ./modules/performance.nix
     ./modules/noctalia.nix
     ./modules/discord.nix
     ./modules/shell_tools.nix
