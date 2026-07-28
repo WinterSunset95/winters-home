@@ -4,6 +4,7 @@
     ./modules/neovim.nix
     ./modules/tmux.nix
     ./modules/performance.nix
+    ./modules/party.nix
     ./modules/noctalia.nix
     ./modules/discord.nix
     ./modules/shell_tools.nix

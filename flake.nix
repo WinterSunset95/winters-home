@@ -25,8 +25,9 @@
       url = "github:noctalia-dev/noctalia/cachix";
     };
     nsticky.url = "github:lonerOrz/nsticky";
+    cava-bg.url = "github:leriart/cava-bg";
 	};
-	outputs = { self, nixpkgs, home-manager, nixcord, catppuccin, noctalia, nsticky, ... }@inputs: {
+	outputs = { self, nixpkgs, home-manager, nixcord, catppuccin, noctalia, nsticky, cava-bg, ... }@inputs: {
     homeConfigurations."autumn" = home-manager.lib.homeManagerConfiguration {
 			pkgs = import nixpkgs {
         system = "x86_64-linux";
@@ -39,6 +40,7 @@
         nixcord.homeModules.nixcord
         catppuccin.homeModules.catppuccin
         nsticky.homeModules.default
+        cava-bg.homeManagerModules.cava-bg
       ];
     };
 	};
