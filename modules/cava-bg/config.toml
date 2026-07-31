@@ -1,33 +1,31 @@
 [general]
 framerate = 60
-autosens = true
-sensitivity = 40.0
 preferred_outputs = []
-dynamic_colors = true
+dynamic_colors = false
 corner_radius = 0.0
-disable_audio = true
+disable_audio = false
 
 [general.background_color]
 hex = "#000000"
 alpha = 0.0
 
 [audio]
-bar_count = 170
+bar_count = 76
 bar_width = 5.0
-bar_spacing = 1.7000000476837158
+bar_spacing = 2.0
 gap = 0.10000000149011612
-bar_alpha = 0.05999999865889549
-height_scale = 0.5
-smoothing = 1.0
+bar_alpha = 1.0
+height_scale = 0.30000001192092896
+smoothing = 0.800000011920929
 max_bar_height = 100.0
 min_bar_height = 0.0
-bar_shape = "Circle"
-corner_radius = 53.0
-corner_segments = 32
+bar_shape = "Line"
+corner_radius = 6.0
+corner_segments = 8
 _legacy_bar_gradient = false
 extract_colors_from_wallpaper = false
 color_extraction_mode = "Dominant"
-visualization_mode = "Spectrum"
+visualization_mode = "Bars"
 polygon_sides = 6
 show_visualizer = true
 radial_inner_radius = 30.0
@@ -44,7 +42,7 @@ hex = "#ff00ff"
 alpha = 1.0
 
 [colors]
-extract_from_wallpaper = true
+extract_from_wallpaper = false
 extraction_mode = "Dominant"
 palette = [
     [
@@ -93,13 +91,6 @@ scale_with_resolution = false
 
 [smoothing]
 monstercat = 1.0
-waves = 10
-
-[hidden_image]
-use_wallpaper = false
-path = ""
-effect = "None"
-blend_mode = "Normal"
 
 [parallax]
 enabled = false
@@ -137,7 +128,7 @@ blend_mode = "Normal"
 use_background = false
 
 [xray]
-enabled = true
+enabled = false
 intensity = 0.800000011920929
 blend_mode = "Normal"
 base_layer_path = ""

@@ -1,0 +1,8 @@
+dark-mode: true
+light-mode: false
+pretty: true
+attribute-co-authored-by: false
+attribute-author: false
+attribute-committer: false
+multiline: true
+vim: true
