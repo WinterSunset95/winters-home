@@ -28,6 +28,8 @@
     spotify
     spotify-player
     playerctl
+    openvpn
+    networkmanager-openvpn
   ];
 
 
