@@ -31,6 +31,7 @@
     playerctl
     openvpn
     networkmanager-openvpn
+    stremio-linux-shell
   ];
 
 
