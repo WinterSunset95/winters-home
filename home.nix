@@ -17,6 +17,7 @@
     ./modules/minecraft.nix
     ./modules/auth.nix
     ./modules/ai_tools.nix
+    ./modules/hacking.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
