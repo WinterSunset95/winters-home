@@ -1,6 +1,9 @@
 { pkgs, config, ... }: {
   home.packages = with pkgs; [
     neovim
+    tree-sitter
+    gcc
+    cargo
 
     # Svelte/SvelteKit
     svelte-language-server
