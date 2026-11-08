@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }: {
   imports = [
     ./modules/browsers.nix
+    ./modules/vscode.nix
     ./modules/neovim.nix
     ./modules/tmux.nix
     ./modules/performance.nix
@@ -32,12 +33,17 @@
     openvpn
     networkmanager-openvpn
     stremio-linux-shell
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
     gst_all_1.gst-libav
   ];
 
+  home.sessionVariables = {
+    GST_PLUGIN_SYSTEM_PATH_1_0 = "$HOME/.nix-profile/lib/gstreamer-1.0";
+  };
 
 	programs.home-manager.enable = true;
   programs.direnv = {

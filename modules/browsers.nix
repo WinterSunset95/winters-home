@@ -73,4 +73,15 @@
   programs.firefox = {
     enable = true; 
   };
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      # uBlock Origin
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+    ];
+    commandLineArgs = [
+      "--enable-features=UseOzonePlatform"
+      "--ozone-platform=wayland"
+    ];
+  };
 }

@@ -8,4 +8,7 @@
   programs.imv = {
     enable = true;
   };
+  home.packages = with pkgs; [
+   vlc
+  ];
 }
